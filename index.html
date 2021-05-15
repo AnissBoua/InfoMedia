@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdb9f7c48a.js" crossorigin="anonymous"></script>
+    <title>IMedia</title>
+</head>
+<body>
+    <section class="headercontainer">
+        <header class="header">
+            <div class="header_menulogo">
+                <div class="header_menulogo_mobile">
+                    <img id="mobile-menu" class="header_menulogo_mobile_menu" src="./media/image/svg/menu_Bars.svg" alt="">
+                    <ul id="mobile-menu_list" class="header_menulogo_mobile_list">
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Tv Series</a></li>
+                        <li><a href="#">Animes</a></li>
+                    </ul>
+                    <script src="./javascript/menu.js"></script>
+                </div>
+                <a href="./index.html" class="header_menulogo_containerlogo">
+                    <img class="header_menulogo_containerlogo_logo" src="./media/image/logo/alpha_wolf_output-onlinepngtools.svg" alt="">
+                    <p><strong><span>I</span>Media</strong></p>
+                </a>
+            </div>
+            <nav class="header_navigation">
+                <ul class="header_navigation_list">
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Tv Series</a></li>
+                    <li><a href="#">Animes</a></li>
+                </ul>
+            </nav>
+            <button class="header_signin">Sign in</button>
+        </header>
+        <div class="headercontainer_title">
+            <h1>Welcome to InfoMedia</h1>
+            <p>InfoMedia give you all the information and keeps you updated on your favorites games, TV series, Movies and Animes</p>
+        </div>
+    </section>
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <div class="features_container">
+                <article class="features_container_article feature_1">
+                    <img class="new" src="./media/image/svg/thin-1160_new_badge-512.svg" alt="">
+                    <div>
+                        <h3>Keep track of upcoming release</h3>
+                        <p>Receive a notification when the release date of the media is announced and when the media will come out.</p>
+                    </div>
+                </article>
+                <article class="features_container_article feature_2">
+                    <img class="reviews" src="./media/image/svg/newspaper.svg" alt="">
+                    <div>
+                        <h3>News and Reviews</h3>
+                        <p>Stay update on your favorites upcoming release. Read reviews from the critic or from users to understand if the game,TV series, movie or anime is made for you.</p>
+                    </div>
+                </article>
+                <article class="features_container_article">
+                    <img class="favorites" src="./media/image/svg/favorites.svg" alt="">
+                    <div>
+                        <h3>Create your own collection</h3>
+                        <p>Choose from over 50.000 medias and create your collection and show it to che community.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="media">
+            <h2>Media</h2>
+            <div class="media_container">
+                <article class="media_article media_games">
+                    <div class="media_article_container">
+                        <div class="media_article_container_info">
+                            <h3>Games</h3>
+                            <p>Look for all games from the newest to the oldest, from AAA games to indies and find the game made for you</p>
+                        </div>
+                        <button> All games</button>
+                    </div>
+                    <img src="./media/image/games/wp6038572-the-last-of-us-2-ps5-wallpapers.jpg" alt="">
+                </article>
+                <article class="media_article media_movies">
+                    <div class="media_article_container movies_container">
+                        <div class="media_article_container_info">
+                            <h3>Movies</h3>
+                            <p>From any genre, search from over 10.000 movies.</p>
+                        </div>
+                        <button>All movies</button>
+                    </div>
+                    <img src="./media/image/Movies/wp1817975-interstellar-wallpapers.jpg" alt="">
+                </article>
+                <article class="media_article media_animes">
+                    <div class="media_article_container anime_container">
+                        <div class="media_article_container_info">
+                            <h3>Animes</h3>
+                            <p>Search through all animes that are available.</p>
+                        </div>
+                        <button>All animes</button>
+                    </div>
+                    <img src="./media/image/animes/wp5615561-desktop-demon-slayer-wallpapers.jpg" alt="">
+                </article>
+                <article class="media_article media_series">
+                    <div class="media_article_container">
+                        <div class="media_article_container_info">
+                            <h3>Tv series</h3>
+                            <p>Look through hundreds of series and find all the iformations about your prefered series </p>
+                        </div>
+                        <button>All series</button>
+                    </div>
+                    <img src="./media/image/TV series/wp5289109-peaky-blinders-desktop-wallpapers.jpg" alt="">
+                </article>
+            </div>
+        </section>
+        <section class="news">
+            <h2>Last News</h2>
+            <div class="news_wrapper">
+                <div class="news_wrapper_selector">
+                    <input type="radio" name="news_media" id="news_games" checked>
+                    <label for="news_games">Games</label>
+                </div>
+                <div class="news_wrapper_selector">
+                    <input type="radio" name="news_media" id="news_movies">
+                    <label for="news_movies">Movies</label>
+                </div>
+                <div class="news_wrapper_selector">
+                    <input type="radio" name="news_media" id="news_animes">
+                    <label for="news_animes">Animes</label>
+                </div>
+                <div class="news_wrapper_selector">
+                    <input type="radio" name="news_media" id="news_series">
+                    <label for="news_series">TV Series</label>
+                </div>
+            </div>
+            <div class="news_container">
+                <figure class="news_article">
+                    <img src="./media/image/games/wp1834818-uncharted-4-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/CP77-KV-en.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp5843299-horizon-zero-dawn-desktop-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp5202260-sekiro-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/PS4Wallpapers.com_5ac796b3d1e8a_spider-man-3840x2160-1056x594.png" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp6038572-the-last-of-us-2-ps5-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp3800535-dark-souls-3-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp4517150-call-of-duty-modern-warfare-hd-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp8993634-god-of-war-ultra-hd-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+                <figure class="news_article">
+                    <img src="./media/image/games/wp3660596-red-dead-redemption-2-4k-wallpapers.jpg" alt="">
+                    <div class="news_article_text">
+                        <h3>Article title</h3>
+                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar.</figcaption>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <section class="release">
+            <div class="release_selectors">
+                <h2>Future release</h2>
+                <div class="release_selectors_wrapper">
+                    <div class="release_selectors_wrapper_input">
+                        <input type="radio" name="release_media" id="release_games" checked>
+                        <label for="release_games">Games</label>
+                    </div>
+                    <div class="release_selectors_wrapper_input">
+                        <input type="radio" name="release_media" id="release_movies">
+                        <label for="release_movies">Movies</label>
+                    </div>
+                    <div class="release_selectors_wrapper_input">
+                        <input type="radio" name="release_media" id="release_animes">
+                        <label for="release_animes">Animes</label>
+                    </div>
+                    <div class="release_selectors_wrapper_input">
+                        <input type="radio" name="release_media" id="release_series">
+                        <label for="release_series">TV Series</label>
+                    </div>
+                </div>
+            </div>
+            <div class="release_element">
+                <div class="release_element_imageshadow">
+                    <img src="./media/image/future_release/games/wp7480272-kena-bridge-of-spirits-wallpapers.jpg" alt="">
+                </div>
+                <div class="release_element_text">
+                    <h3>Kena bridge of spirits</h3>
+                    <p>A story-driven, action adventure combining exploration with fast-paced combat. As Kena, players find and grow a team of charming spirit companions called the Rot, enhancing their abilities and creating new ways to manipulate the environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_element">
+            <a href="./index.html" class="header_menulogo_containerlogo">
+                <img class="header_menulogo_containerlogo_logo" src="./media/image/logo/alpha_wolf_output-onlinepngtools.svg" alt="">
+                <p><strong><span>I</span>Media</strong></p>
+            </a>
+            <div>
+                <h3>Social</h3>
+                <div>
+                    <a href=""><i class="fab footer_fa_social fa-instagram"></i></a>
+                    <a href=""><i class="fab footer_fa_social fa-facebook-square"></i></a>
+                    <a href=""><i class="fab footer_fa_social fa-youtube"></i></a>
+                    <a href=""><i class="fab footer_fa_social fa-twitter"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer_element">
+            <h3>Medias</h3>
+            <ul>
+                <li><a href="">Games</a></li>
+                <li><a href="">Movies</a></li>
+                <li><a href="">Animes</a></li>
+                <li><a href="">Tv series</a></li>
+            </ul>
+        </div>
+        <div class="footer_element">
+            <h3>Usefull links</h3>
+            <ul>
+                <li><a href="">Account</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Future release</a></li>
+            </ul>
+        </div>
+        <div class="footer_element">
+            <h3>Assistance</h3>
+            <ul>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">Cookie policy</a></li>
+                <li><a href="">Manage coockies</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

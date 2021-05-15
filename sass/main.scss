@@ -1,0 +1,532 @@
+$font: 'Quicksand', sans-serif;
+$primaryDark: rgb(30,30,30);
+$secondaryDark: rgb(20,20,20);
+$tertiaryDark: rgb(50,50,50);
+$primaryOrange: rgb(255,140,0);
+$secondaryOrange: rgb(255, 190, 0);
+$tertiaryOrange: rgb(255, 160, 0);
+$sectionsPadding: 2em 4em;
+
+body{
+    font-family: $font;
+    background-color: $primaryDark;
+    color: white;
+    margin: 0;
+    font-size: 14px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            color: $primaryOrange;
+            transition: 0.3s;
+        }
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 4em;
+    &_menulogo{
+        display: flex;
+        align-items: center;
+        &_mobile{
+            display: none;
+        }
+        &_containerlogo{
+            display: flex;
+            &_logo{
+                padding: 0 0.5em 0 0;
+                width: 3em;
+            }
+        
+            span{
+                color: $primaryOrange;
+            }
+        }
+    }
+    &_navigation_list{
+        display: flex;
+        li{
+            padding: 0 4em;
+        }
+    }
+    &_signin{
+        font-family: $font;
+        cursor: pointer;
+        background-color: $primaryOrange;
+        color: white;
+        border: 0;
+        border-radius: 1em;
+        padding: 0.5em 2em;
+    }
+}
+
+.headercontainer{
+    display: flex;
+    flex-direction: column;
+    height: 25em;
+    text-align: center;
+    background: linear-gradient(135deg, $secondaryOrange 65%, $tertiaryOrange);
+    border-radius: 0 0 1em 1em;
+
+    &_title{
+        width: 30%;
+        margin: auto;
+    }
+}
+
+.features{
+    max-width: 1800px;
+    margin: auto;
+    padding: $sectionsPadding;
+    &_container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 2em 0;
+        &_article{
+            width: 20em;
+            margin: 1em 0;
+            padding: 0 1em 0 0;
+            .new, .reviews, .favorites{
+                width: 2.5em;
+                fill: $primaryOrange;
+            }
+        }
+    }
+}
+
+.media{
+    background-color: $secondaryDark;
+    padding: $sectionsPadding;
+    h2{
+        max-width: 1800px;
+        margin: 1em auto;
+    }
+    &_container{
+        max-width: 1800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 15em);
+    }
+    &_article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $primaryDark;
+        border-radius: 1em;
+        margin: 0em 1em 1em 0;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0 0 1em 1em;
+        }
+    
+        &_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 1.5em;
+    
+            button{
+                align-self: flex-end;
+                font-family: $font;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                border: 0.15em solid $primaryOrange;
+                border-radius: 1em;
+                padding: 0.4em 1em;
+                margin: 1em 0;
+                &:hover{
+                    background-color: $primaryOrange;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    &_games{
+        grid-row: 1/3;
+        img{
+            max-width: 100%;
+            height: 50%;
+            object-fit: cover;
+            // border-radius: 1em 0em 0em 1em;
+        }
+    }
+    &_series{
+        grid-column: 2/4;
+        grid-row: 2;
+        flex-direction: row;
+        img{
+            max-width: 50%;
+            // border-radius: 1em 0em 0em 1em;
+            border-radius: 0em 1em 1em 0em;
+        }
+    }
+    &_movies, &_animes{
+        flex-direction: row;
+        img{
+            max-width: 40%;
+            height: 100%;
+            // border-radius: 1em 0em 0em 1em;
+            border-radius: 0em 1em 1em 0em;
+        }
+    }
+    // &_animes{
+    //     flex-direction: row;
+    //     img{
+    //         width: 40%;
+    //         height: 100%;
+    //         border-radius: 0em 1em 1em 0em;
+    //     }
+    // }
+}
+
+.news{
+    max-width: 1800px;
+    padding: $sectionsPadding;
+    margin: auto;
+    &_wrapper{
+        display: flex;
+        &_selector{
+            label{
+                margin: 0 2em 0 0;
+            }
+            input[type="radio"]{
+                display: none;
+                &:hover + label{
+                    color: $secondaryOrange;
+                }
+                &:checked + label{
+                    color: $primaryOrange;
+                    font-weight: bold;
+                    transition: 0.2s;
+                }
+                
+            }
+        }
+    }
+    &_container{
+        display: flex;
+        overflow-x:auto;
+        overflow-y: hidden;
+        &::-webkit-scrollbar{
+            height: 0em;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: $tertiaryDark;
+        }
+    }
+    &_article{
+        min-width: 15em;
+        max-width: 15em;
+        min-height: 15em;
+        max-height: 20em;
+        background-color: $secondaryDark;
+        border-radius: 1em;
+        margin: 2em 2em 0 0;
+        img{
+            max-width: 100%;
+            width: 100%;
+            min-height: 50%;
+            max-height: 50%;
+            object-fit: cover;
+            border-radius: 1em 1em 0 0;
+        }
+        &_text{
+            padding: 0.5em 1em 1em 1em;
+            h3{
+                margin: 0.2em 0;
+            }
+        }
+    }
+}
+
+.release{
+    margin: 2em 0 0 0;
+    &_selectors{
+        background-color: $secondaryDark;
+        padding: $sectionsPadding;
+        h2{
+            max-width: 1800px;
+            margin: 1em auto;
+        }
+        &_wrapper{
+            display: flex;
+            max-width: 1800px;
+            margin: auto;
+            &_input{
+                label{
+                    margin: 0 2em 0 0;
+                }
+                input[type="radio"]{
+                    display: none;
+                    &:hover + label{
+                        color: $secondaryOrange;
+                    }
+                    &:checked + label{
+                        color: $primaryOrange;
+                        font-weight: bold;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+    
+    &_element{
+        position: relative;
+        &_imageshadow{
+            max-height: 40em;
+            box-shadow: inset 10em 0 30em 4em $secondaryDark;
+            img{
+                position: relative;
+                z-index: -2;
+                width: 100%;
+                height: fit-content;
+                max-height: 40em;
+                object-fit: cover;
+            }
+        }
+        &_text{
+            position: absolute;
+            width: 40%;
+            left: 5em;
+            bottom: 5em;
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $secondaryDark;
+    border-top: 0.15em solid $tertiaryDark;
+    padding: $sectionsPadding;
+    &_element{
+        width: 15em;
+        ul{
+            li{
+                padding: 0.25em 0;
+            }
+        }
+    }
+    &_fa_social{
+        font-size: 1.25em;
+        border-radius: 0.3em;
+        padding: 0.1em;
+        margin: 0 1em 0 0;
+        &:hover{
+            color: $primaryOrange;
+            transition: 0.2s;
+        }
+    }
+}
+
+@media (min-width: 1960px){
+    .release{
+        &_element{
+            &_text{
+                width: 1800px;
+                right: 0;
+                left: 0;
+                margin: auto;
+                h3, p{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    $sectionsPadding: 1em 2em;
+    .header{
+        padding: 0.5em 2em;
+        &_navigation_list{
+            li{
+                padding: 0 2em;
+            }
+        }
+    }
+    .headercontainer{
+        height: 20em;
+        &_title{
+            width: 45%;
+        }
+    }
+    .features{
+        padding: $sectionsPadding;
+        &_container{
+            &_article{
+                padding: 0 3em 0 0;
+            }
+        }
+    }
+    .media{
+        padding: $sectionsPadding;
+        &_container{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 14em);
+        }
+        &_movies{
+            flex-direction: row-reverse;
+            img{
+                max-width: 40%;
+                height: 100%;
+                border-radius: 1em 0em 0em 1em;
+                // border-radius: 0em 1em 1em 0em;
+            }
+        }
+        &_series{
+            grid-column: 1/3;
+            grid-row: 3;
+        }
+    }
+    .news{
+        padding: $sectionsPadding;
+        &_article{
+            min-width: 13em;
+        }
+    }
+    .release{
+        &_selectors{
+            padding: $sectionsPadding;
+        }
+        &_element{
+            &_imageshadow{
+                max-height: 35em;
+                img{
+                    max-height: 35em;
+                }
+            }
+            &_text{
+                width: 45%;
+                left: 2em;
+                bottom: 2em;
+            }
+        }
+    }
+    .footer{
+        padding: $sectionsPadding ;
+    }
+}
+
+@media (max-width: 700px){
+    .header{
+        padding: 0;
+        &_menulogo{
+            &_mobile{
+                display: block;
+                position: relative;
+                padding: 1.5em 0 1.5em 2em;
+                &_menu{
+                    margin: 0 1em 0 0;
+                }
+                &_list{
+                    display: none;
+                }
+                &_show{
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    text-align: start;
+                    background-color: $secondaryDark;
+                    width: calc(100vw - 4em);
+                    height: 12em;
+                    border-radius: 0 0 1em 1em;
+                    padding: 2em;
+                    li{
+                        padding: 0.4em 0;
+                    }
+                }
+            }
+        }
+        &_navigation{
+            display: none;
+        }
+        &_signin{
+            margin: 0.5em 2em;
+        }
+    }
+    .headercontainer{
+        height: 20em;
+        &_title{
+            width: 70%;
+        }
+    }
+    .news{
+        label{
+            margin: 0 1em 0 0;
+        }
+    }
+    .release{
+        label{
+            margin: 0 1em 0 0;
+        }
+        &_element{
+            &_imageshadow{
+                max-height: 30em;
+                box-shadow: inset 10em 0 20em 1em $secondaryDark;
+                img{
+                    max-height: 30em;
+                }
+            }
+            &_text{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .media{
+        &_container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 26em repeat(2, 14em) 26em;
+        }
+        &_article{
+            margin: 0 0 1em 0;
+            &_container{
+                padding: 0 1em;
+            }
+        }
+        &_games{
+            grid-row: 1;
+            img{
+                max-height: 50%;
+            }
+        }
+        &_movies{
+            grid-row: 2;
+        }
+        &_movies, &_animes{
+            img{
+                max-width: 45%;
+            }
+        }
+        &_series{
+            flex-direction: column;
+            grid-column: 1;
+            grid-row: 4;
+            img{
+                height: 50%;
+                max-width: 100%;
+                object-position: top;
+                // border-radius: 1em 0em 0em 1em;
+                border-radius: 0em 0 1em 1em;
+            }
+        }
+    }
+}
