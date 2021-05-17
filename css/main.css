@@ -222,8 +222,12 @@ body a:hover {
   transition: 0.2s;
 }
 
-.news_container {
+.news #container_0 {
   display: flex;
+}
+
+.news_container {
+  display: none;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -301,7 +305,12 @@ body a:hover {
   transition: 0.2s;
 }
 
+.release #release_container_0 {
+  display: block;
+}
+
 .release_element {
+  display: none;
   position: relative;
 }
 

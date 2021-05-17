@@ -215,8 +215,11 @@ body{
             }
         }
     }
-    &_container{
+    #container_0{
         display: flex;
+    }
+    &_container{
+        display: none;
         overflow-x:auto;
         overflow-y: hidden;
         &::-webkit-scrollbar{
@@ -283,8 +286,11 @@ body{
             }
         }
     }
-    
+    #release_container_0{
+        display: block;
+    }
     &_element{
+        display: none;
         position: relative;
         &_imageshadow{
             max-height: 40em;
