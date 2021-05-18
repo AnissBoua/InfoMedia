@@ -327,6 +327,28 @@ body{
                 padding: 0.25em 0;
             }
         }
+        &_themes{
+            display: flex;
+            #dark_theme{
+                font-family: $font;
+                background-color: $primaryDark;
+                color: white;
+                cursor: pointer;
+                padding:  0.8em 1em;
+                margin: 0 0.5em 0 0;
+                border: 0.15em solid white;
+                border-radius: 1em;
+            }
+            #light_theme{
+                font-family: $font;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                padding:  0.8em 1em;
+                border: 0.15em solid $primaryDark;
+                border-radius: 1em;
+            }
+        }
     }
     &_fa_social{
         font-size: 1.25em;
