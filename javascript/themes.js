@@ -1,47 +1,48 @@
 var darkTheme = document.getElementById("dark_theme");
 var lightTheme = document.getElementById("light_theme");
-var secondaryTheme = document.getElementsByClassName("change_theme");
-var secondaryOverrideTheme = document.getElementsByClassName("change_media_theme");
 
 // function dark(){
-//     document.body.style.backgroundColor = "rgb(30,30,30)";
-//     document.body.style.color = "white";
-//     for(var i = 0; i<= secondaryTheme.length; i++){
-//         secondaryTheme[i].style.backgroundColor = "rgb(20,20,20)";
-//         secondaryOverrideTheme[i].style.backgroundColor = "rgb(30,30,30)";
+//     document.body.classList.add("dark_theme");
+//     if(document.body.classList.contains("light_theme")){
+//         document.body.classList.remove("light_theme");
+//         document.body.classList.add("dark_theme");
 //     }
 // }
 
 // function light(){
-//     document.body.style.backgroundColor = "white";
-//     document.body.style.color = "rgb(30,30,30)";
-//     for(var i = 0; i<= secondaryTheme.length; i++){
-//         secondaryTheme[i].style.backgroundColor = "rgb(240,240,240)";
-//         secondaryOverrideTheme[i].style.backgroundColor = "white";
+//     document.body.classList.add("light_theme");
+//     if(document.body.classList.contains("dark_theme")){
+//         document.body.classList.remove("dark_theme");
+//         document.body.classList.add("light_theme");
 //     }
 // }
+
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
 function dark(){
-    document.body.style.backgroundColor = "rgb(30,30,30)";
-    document.body.style.color = "white";
-    for(var i = 0; i<= secondaryTheme.length; i++){
-        secondaryTheme[i].style.backgroundColor = "rgb(20,20,20)";
-    }
-    for(var j = 0; j<= secondaryOverrideTheme.length; j++){
-        secondaryOverrideTheme[j].style.backgroundColor = "rgb(30,30,30)";
+    if (localStorage.getItem('theme') === 'light_theme'){
+        setTheme('dark_theme');
     }
 }
 
 function light(){
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = "rgb(30,30,30)";
-    for(var i = 0; i<= secondaryTheme.length; i++){
-        secondaryTheme[i].style.backgroundColor = "rgb(240,240,240)";
-    }
-
-    for(var j = 0; j<= secondaryOverrideTheme.length; j++){
-        secondaryOverrideTheme[j].style.backgroundColor = "white";
+    if (localStorage.getItem('theme') === 'dark_theme'){
+        setTheme('light_theme');
     }
 }
+
+// Immediately invoked function to set the theme on initial load
+(function () {
+   if (localStorage.getItem('theme') === 'dark_theme') {
+       setTheme('dark_theme');
+   } else {
+       setTheme('light_theme');
+   }
+})();
 
 darkTheme.addEventListener('click', dark);
 lightTheme.addEventListener('click', light);

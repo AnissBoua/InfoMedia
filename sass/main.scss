@@ -1,16 +1,34 @@
 $font: 'Quicksand', sans-serif;
+$primaryColor: var(--primaryColor);
+$secondaryColor: var(--secondaryColor);
 $primaryDark: rgb(30,30,30);
-$secondaryDark: rgb(20,20,20);
 $tertiaryDark: rgb(50,50,50);
 $primaryOrange: rgb(255,140,0);
 $secondaryOrange: rgb(255, 190, 0);
 $tertiaryOrange: rgb(255, 160, 0);
+$textColor: var(--textColor);
 $sectionsPadding: 2em 4em;
+
+:root{
+    --primaryColor: rgb(30,30,30);
+    --secondaryColor: rgb(20,20,20);
+    --textColor: rgb(255,255,255);
+}
+.dark_theme{
+    --primaryColor: rgb(30,30,30);
+    --secondaryColor: rgb(20,20,20);
+    --textColor: rgb(255,255,255);
+}
+.light_theme{
+    --primaryColor: rgb(255,255,255);
+    --secondaryColor: rgb(240,240,240);
+    --textColor: rgb(30,30,30);
+}
 
 body{
     font-family: $font;
-    background-color: $primaryDark;
-    color: white;
+    background-color: $primaryColor;
+    color: $textColor;
     margin: 0;
     font-size: 14px;
     ul{
@@ -20,7 +38,7 @@ body{
     
     a{
         text-decoration: none;
-        color: white;
+        color: $textColor;
         &:hover{
             color: $primaryOrange;
             transition: 0.3s;
@@ -41,11 +59,10 @@ body{
         }
         &_containerlogo{
             display: flex;
-            &_logo{
-                padding: 0 0.5em 0 0;
-                width: 3em;
-            }
-        
+            // &_logo{
+            //     padding: 0 0.5em 0 0;
+            //     width: 3em;
+            // }
             span{
                 color: $primaryOrange;
             }
@@ -66,6 +83,10 @@ body{
         border-radius: 1em;
         padding: 0.5em 2em;
     }
+}
+
+#svglogo_path{
+    fill: $textColor;
 }
 
 .headercontainer{
@@ -104,7 +125,7 @@ body{
 }
 
 .media{
-    background-color: $secondaryDark;
+    background-color: $secondaryColor;
     padding: $sectionsPadding;
     h2{
         max-width: 1800px;
@@ -121,7 +142,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: $primaryDark;
+        background-color: $primaryColor;
         border-radius: 1em;
         margin: 0em 1em 1em 0;
         img{
@@ -141,7 +162,7 @@ body{
                 font-family: $font;
                 cursor: pointer;
                 background-color: rgba(0, 0, 0, 0);
-                color: white;
+                color: $textColor;
                 border: 0.15em solid $primaryOrange;
                 border-radius: 1em;
                 padding: 0.4em 1em;
@@ -235,7 +256,7 @@ body{
         max-width: 15em;
         min-height: 15em;
         max-height: 20em;
-        background-color: $secondaryDark;
+        background-color: $secondaryColor;
         border-radius: 1em;
         margin: 2em 2em 0 0;
         img{
@@ -258,7 +279,7 @@ body{
 .release{
     margin: 2em 0 0 0;
     &_selectors{
-        background-color: $secondaryDark;
+        background-color: $secondaryColor;
         padding: $sectionsPadding;
         h2{
             max-width: 1800px;
@@ -294,7 +315,7 @@ body{
         position: relative;
         &_imageshadow{
             max-height: 40em;
-            box-shadow: inset 10em 0 30em 4em $secondaryDark;
+            box-shadow: inset 10em 0 30em 4em $primaryDark;
             img{
                 position: relative;
                 z-index: -2;
@@ -309,6 +330,7 @@ body{
             width: 40%;
             left: 5em;
             bottom: 5em;
+            color: white;
         }
     }
 }
@@ -317,7 +339,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: $secondaryDark;
+    background-color: $secondaryColor;
     border-top: 0.15em solid $tertiaryDark;
     padding: $sectionsPadding;
     &_element{
@@ -334,9 +356,9 @@ body{
                 background-color: $primaryDark;
                 color: white;
                 cursor: pointer;
-                padding:  0.8em 1em;
+                padding:  0.5em 0.7em;
                 margin: 0 0.5em 0 0;
-                border: 0.15em solid white;
+                border: 0.15em solid $textColor;
                 border-radius: 1em;
             }
             #light_theme{
@@ -344,8 +366,8 @@ body{
                 background-color: white;
                 color: black;
                 cursor: pointer;
-                padding:  0.8em 1em;
-                border: 0.15em solid $primaryDark;
+                padding:  0.5em 0.7em;
+                border: 0.15em solid $textColor;
                 border-radius: 1em;
             }
         }
@@ -470,7 +492,7 @@ body{
                     position: absolute;
                     left: 0;
                     text-align: start;
-                    background-color: $secondaryDark;
+                    background-color: $secondaryColor;
                     width: calc(100vw - 4em);
                     height: 12em;
                     border-radius: 0 0 1em 1em;
@@ -506,7 +528,7 @@ body{
         &_element{
             &_imageshadow{
                 max-height: 30em;
-                box-shadow: inset 10em 0 20em 1em $secondaryDark;
+                box-shadow: inset 10em 0 20em 1em $primaryDark;
                 img{
                     max-height: 30em;
                 }
