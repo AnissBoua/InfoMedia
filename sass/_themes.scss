@@ -1,0 +1,15 @@
+:root{
+    --primaryColor: rgb(30,30,30);
+    --secondaryColor: rgb(20,20,20);
+    --textColor: rgb(255,255,255);
+}
+.dark_theme{
+    --primaryColor: rgb(30,30,30);
+    --secondaryColor: rgb(20,20,20);
+    --textColor: rgb(255,255,255);
+}
+.light_theme{
+    --primaryColor: rgb(255,255,255);
+    --secondaryColor: rgb(240,240,240);
+    --textColor: rgb(30,30,30);
+}

@@ -1,0 +1,27 @@
+body{
+    font-family: $font;
+    background-color: $primaryColor;
+    color: $textColor;
+    margin: 0;
+    font-size: 14px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    a{
+        text-decoration: none;
+        color: $textColor;
+        &:hover{
+            color: $primaryOrange;
+            transition: 0.3s;
+        }
+    }
+    &::-webkit-scrollbar{
+        width: 0.5em;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $textColor;
+        border-radius: 1em;
+    }
+}

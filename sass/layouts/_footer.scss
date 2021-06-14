@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $secondaryColor;
+    border-top: 0.15em solid $tertiaryDark;
+    padding: $sectionsPadding;
+    &_element{
+        width: 15em;
+        ul{
+            li{
+                padding: 0.25em 0;
+            }
+        }
+        &_themes{
+            display: flex;
+            #dark_theme{
+                font-family: $font;
+                background-color: $primaryDark;
+                color: white;
+                cursor: pointer;
+                padding:  0.5em 0.7em;
+                margin: 0 0.5em 0 0;
+                border: 0.15em solid $textColor;
+                border-radius: 1em;
+            }
+            #light_theme{
+                font-family: $font;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                padding:  0.5em 0.7em;
+                border: 0.15em solid $textColor;
+                border-radius: 1em;
+            }
+        }
+    }
+    &_fa_social{
+        font-size: 1.25em;
+        border-radius: 0.3em;
+        padding: 0.1em;
+        margin: 0 1em 0 0;
+        &:hover{
+            color: $primaryOrange;
+            transition: 0.2s;
+        }
+    }
+}

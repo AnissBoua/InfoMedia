@@ -1,0 +1,56 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 4em;
+    &_menulogo{
+        display: flex;
+        align-items: center;
+        &_mobile{
+            display: none;
+        }
+        &_containerlogo{
+            display: flex;
+            // &_logo{
+            //     padding: 0 0.5em 0 0;
+            //     width: 3em;
+            // }
+            span{
+                color: $primaryOrange;
+            }
+        }
+    }
+    &_navigation_list{
+        display: flex;
+        li{
+            padding: 0 4em;
+        }
+    }
+    &_signin{
+        font-family: $font;
+        cursor: pointer;
+        background-color: $primaryOrange;
+        color: white;
+        border: 0;
+        border-radius: 1em;
+        padding: 0.5em 2em;
+    }
+}
+
+#svglogo_path{
+    fill: $textColor;
+}
+
+.headercontainer{
+    display: flex;
+    flex-direction: column;
+    height: 25em;
+    text-align: center;
+    background: linear-gradient(135deg, $secondaryOrange 65%, $tertiaryOrange);
+    border-radius: 0 0 1em 1em;
+
+    &_title{
+        width: 30%;
+        margin: auto;
+    }
+}

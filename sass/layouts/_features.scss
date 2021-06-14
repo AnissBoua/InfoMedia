@@ -1,0 +1,20 @@
+.features{
+    max-width: 1800px;
+    margin: auto;
+    padding: $sectionsPadding;
+    &_container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 2em 0;
+        &_article{
+            width: 20em;
+            margin: 1em 0;
+            padding: 0 1em 0 0;
+            .new, .reviews, .favorites{
+                width: 2.5em;
+                fill: $primaryOrange;
+            }
+        }
+    }
+}
