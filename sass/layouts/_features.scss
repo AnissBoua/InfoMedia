@@ -18,3 +18,15 @@
         }
     }
 }
+
+@media (max-width: 1100px){
+    $sectionsPadding: 1em 2em;
+    .features{
+        padding: $sectionsPadding;
+        &_container{
+            &_article{
+                padding: 0 3em 0 0;
+            }
+        }
+    }
+}

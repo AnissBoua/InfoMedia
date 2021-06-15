@@ -72,3 +72,45 @@
         }
     }
 }
+
+@media (max-width: 1100px){
+    $sectionsPadding: 1em 2em;
+    .release{
+        &_selectors{
+            padding: $sectionsPadding;
+        }
+        &_element{
+            &_imageshadow{
+                max-height: 35em;
+                img{
+                    max-height: 35em;
+                }
+            }
+            &_text{
+                width: 45%;
+                left: 2em;
+                bottom: 2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .release{
+        label{
+            margin: 0 1em 0 0;
+        }
+        &_element{
+            &_imageshadow{
+                max-height: 30em;
+                box-shadow: inset 10em 0 20em 1em $primaryDark;
+                img{
+                    max-height: 30em;
+                }
+            }
+            &_text{
+                width: 80%;
+            }
+        }
+    }
+}
